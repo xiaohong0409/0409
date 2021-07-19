@@ -33,64 +33,10 @@
 </div>
 </div>
     </nav>
-     <table class="table">
-       <thead>
-         <tr>
-           <th scope="col">ID</th>
-           <th scope="col">FirstName</<th>
-           <th scope="col">LastName</th>
-           <th scope="col">Address</th>
-           <th scope="col">Email</th>
-           <th scope="col">BookingNumber</th>
-</tr>
-</thead>
-<tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>711 Nulla St. Mankato Mississippi</td>
-    <td>mark@gmail.com</td>
-    <td>0000001</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>John</td>
-    <td>Johnson</td>
-    <td>Bangkok</td>
-    <td>john@gmail.com</td>
-    <td>0000002</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>Ally</td>
-    <td>Aagaard</td>
-    <td>Azusa New York 39521</td>
-    <td>ally@gmail.com</td>
-    <td>0000003</td>
-  </tr>
-  <tr>
-    <th scope="row">4</th>
-    <td>Lyla</td>
-    <td>Abbatiello</td>
-    <td>1655 Phetchaburi Rd</td>
-    <td>lyla@gmail.com</td>
-    <td>0000005</td>
-  </tr>
-  <tr>
-    <th scope="row">5</th>
-    <td>Jacob</td>
-    <td>Abraham</td>
-    <td>Sukhumvit 28</td>
-    <td>jacob@gmail.com</td>
-    <td>0000006</td>
-  </tr>
-  </tbody>
-  </table>
+
 <?php require_once 'process.php';?>
   <div class="container">
   <h3>Add new value into database</h3>
-
   <form action="process.php" method="post">
     <div class="from-group">
     <label>First Name</lable>
@@ -113,6 +59,21 @@
   </div>
             </form>
 </div>
+
+
+        <?php
+
+        $conn=mysqli_connect("localhost","root","386465721","booking_system");
+        $query="select * from passenger";
+        $result=mysqli_query($conn,$query);
+
+        while($row=mysqli_fetch_array($result)){
+          echo"".$row['fname']." ".$row['lname']." ".$row['address']." ".$row['email']." ".$row['bookingnumber']."<br>";
+        }
+        ?>
+</table>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
