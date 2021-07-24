@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,7 +11,6 @@
 
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg bg-success navbar-dark">
       <div class="container">
 <a href="#" class="navbar-brand">Booking System</a>
@@ -22,17 +22,21 @@
 <div class="collapse navbar-collapse" id="navmenu">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a href="#home" class="nav-link">Home</a>
+      <a href="home.php" class="nav-link">Home</a>
     </li>
- 
     <li class="nav-item">
-      <a href="https://www.google.com" class="nav-link">help</a>
+      <a href="train1.php" class="nav-link">Train</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="https://www.github.com" class="nav-link">help</a>
     </li>
 </div>
 </div>
     </nav>
 
 <?php require_once 'process.php';?>
+
   <div class="container">
   <h3>Add new value into database</h3>
   <form action="process.php" method="post">
@@ -57,7 +61,6 @@
   </div>
             </form>
 </div>
-
 
         <?php
 
