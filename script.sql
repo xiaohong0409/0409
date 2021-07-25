@@ -24,10 +24,11 @@ create table engineer
 
 create table passenger
 (
-  passportnumber int,
+  fname varchar(20),
+  lname varchar(20),
   address varchar(30),
-  phonenumber int,
-  name varchar(20)
+  email varchar(20),
+  bookingnumber int,
   primary key(passportNumber)
 );
 
