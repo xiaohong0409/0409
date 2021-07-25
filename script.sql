@@ -1,7 +1,5 @@
 create table train
 (
-  capacity int,
-  arrivaltime int,
   purchasedate int,
   trainnumber int not null,
   engineer int,
@@ -9,17 +7,6 @@ create table train
   arrivalto varchar(50),
   departurefrom varchar(50),
   primary key(TrainNumber)
-);
-
-create table engineer
-(
-  address varchar(50),
-  phonenumber int,
-  datehired int,
-  name varchar(20),
-  trainnumber int,
-  primary key(PhoneNumber),
-  foreign key(TrainNumber) references Train(TrianNumber)
 );
 
 create table passenger
