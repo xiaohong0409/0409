@@ -247,16 +247,7 @@ body {
         <input type="submit" value="Book">
     </form>
 
-    <?php
-
-    $conn=mysqli_connect("localhost","root","386465721","booking_system");
-    $query="select * from tickts";
-    $result=mysqli_query($conn,$query);
-
-    while($row=mysqli_fetch_array($result)){
-      echo"".$row['tocity']." ".$row['fromcity']." ".$row['date']." ".$row['email']."<br>";
-    }
-    ?>
+    
 </body>
 </html>
 v
