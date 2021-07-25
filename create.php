@@ -210,24 +210,29 @@ body {
   <body>
 
 <?php
-include 'function.php';
+    include 'function.php';
 
-if (isset($_POST['tocity'], $_POST['fromcity'], $_POST['date'],$_POST['email'])) {
+    print_r($_POST);
+    if(isset($_POST["tickts"])){
+      $fromcity=$_POST['fromcity'];
+      $to=$_POST['to'];
+      $date=$_POST['date'];
+      $email=$_POST['email'];
 
-    if (empty($_POST['tocity']) || empty($_POST['from']) || empty($_POST['date']) ||empty($_POST['email'] )) {
-        echo  'Please complete the form!';
-    } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        echo  'Please provide a valid email address!';
-    } else {
+          $sql="INSERT INTO tickts (tocity,fromcity,date,email) VALUES('$tocity','$fromcity','$date','$email');";
+      mysqlo=i_query($conn,$sql);
 
-        $stmt = $pdo->prepare('INSERT INTO tickets (tocity,fromcity,date, email) VALUES (?, ?, ?,?)');
-        $stmt->execute([ $_POST['tocity'],  $_POST['from'],$_POST['date'], $_POST['email'] ]);
+      $sta=mysqli_prepare($conn,$sql);
 
-        header('Location: view.php?id=' . $pdo->lastInsertId());
+      mysqli_stmt_bind_param($sta,'ssis',$fromcity,$tocity,$date,$email);
+      echo $conn->errno;
+      //$sta->execute();
+      echo $conn->errno;
+      echo $sta;
+        }
     }
-}
-?>
 
+    ?>
 <div class="content create">
 	<h2>Book Ticket</h2>
     <form action="create.php" method="post">
