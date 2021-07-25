@@ -215,7 +215,7 @@ body {
     print_r($_POST);
     if(isset($_POST["tickts"])){
       $fromcity=$_POST['fromcity'];
-      $to=$_POST['to'];
+      $tocity=$_POST['tocity'];
       $date=$_POST['date'];
       $email=$_POST['email'];
 
