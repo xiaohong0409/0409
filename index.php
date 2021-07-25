@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
+
     <title>Bootstrap</title>
 
   </head>
@@ -24,9 +26,6 @@
     <li class="nav-item">
       <a href="home.php" class="nav-link">Home</a>
     </li>
-    <li class="nav-item">
-      <a href="train1.php" class="nav-link">Train</a>
-    </li>
 
     <li class="nav-item">
       <a href="https://www.google.com" class="nav-link">help</a>
@@ -34,9 +33,7 @@
 </div>
 </div>
     </nav>
-
-<?php require_once 'process.php';?>
-
+<include function.php>
   <div class="container">
   <h3>Add new value into database</h3>
   <form action="process.php" method="post">
