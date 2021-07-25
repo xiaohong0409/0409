@@ -32,6 +32,15 @@ create table passenger
   primary key(passportNumber)
 );
 
+create table tickts
+(
+  tocity(20),
+  fromcity(20),
+  date(30),
+  email(20),
+  bookingnumber int,
+  primary key(passportNumber)
+);
 create table reservation
 (
   reservationnumber int,
