@@ -58,7 +58,6 @@
 <?php
 print_r($_POST);
 if(isset($_POST["fromcity"])){
-  print("aaaaaa");
   $fromcity=$_POST["fromcity"];
   $tocity=$_POST["tocity"];
   $date=$_POST["date"];
