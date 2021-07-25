@@ -29,7 +29,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="https://www.github.com" class="nav-link">help</a>
+      <a href="https://www.google.com" class="nav-link">help</a>
     </li>
 </div>
 </div>
