@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -132,30 +131,30 @@ body {
 .home .tickets-list .ticket:hover {
     background-color: #fcfcfc;
 }
-
-.create form{
+.
+.create form, .view form {
     padding: 15px 0;
     display: flex;
     flex-flow: column;
     width: 400px;
 }
-.create form label {
+.create form label, .view form label {
     display: inline-flex;
     width: 100%;
     padding: 10px 0;
     margin-right: 25px;
 }
-.create form input, .create form textarea{
+.create form input, .create form textarea, .view form input, .view form textarea {
     padding: 10px;
     width: 100%;
     margin-right: 25px;
     margin-bottom: 15px;
     border: 1px solid #cccccc;
 }
-.create form textarea {
+.create form textarea, .view form textarea {
     height: 200px;
 }
-.create form input[type="submit"] {
+.create form input[type="submit"], .view form input[type="submit"] {
     display: block;
     background-color: #38b673;
     border: 0;
@@ -167,12 +166,13 @@ body {
     margin-top: 15px;
     border-radius: 5px;
 }
-.create form input[type="submit"]:hover {
+.create form input[type="submit"]:hover, .view form input[type="submit"]:hover {
     background-color: #32a367;
 }
   </style>
   <body>
-  <include 'function.php'>
+
+
 <div class="content create">
 	<h2>Book Ticket</h2>
     <form action="create.php" method="post">
@@ -188,22 +188,32 @@ body {
     </form>
 
     <?php
-    print_r($_POST);
-    if(isset($_POST["tickets"])){
-      $fromcity=$_POST['fromcity'];
-      $tocity=$_POST['tocity'];
-      $date=$_POST['date'];
-      $email=$_POST['email'];
 
-          $sql="INSERT INTO tickets (tocity,fromcity,date,email) VALUES('$tocity','$fromcity','$date','$email');";
-    if($conn->query($sql)===TRUE){
-      echo"ADDED: " .$fromcity.", ".$tocity.", ".$date.", ".$email;
 
-    }else{
-      echo"ERROR: ".$sql."<br>".$conn->error;
+    $conn=mysqli_connect("localhost","root","386465721","booking_system");
+    $query="select * from tickets";
+    $result=mysqli_query($conn,$query);
+
+    while($row=mysqli_fetch_array($result)){
+      echo"".$row['fromcity']." ".$row['tocity']." ".$row['date']." ".$row['email']."<br>";
     }
-    $conn->cloce();
-    ?>
 
+  /*  $conn=mysqli_connect('localhost','root','386465721','booking_system');
+
+    if(!$conn){
+      echo'Connection error: ' . mysqli_connect_error();
+    }
+
+    $sql='SELECT *FROM tickets';
+
+    $result=mysqli_query($conn, $sql);
+
+    $passenger=mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    mysqli_free_result($result);
+    mysqli_close($conn);
+
+    print_r($tickets);*/
+    ?>
 </body>
 </html>
