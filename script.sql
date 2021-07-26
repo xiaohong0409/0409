@@ -9,7 +9,7 @@ create table train
   primary key(TrainNumber)
 );
 
-create table passenger
+create table passengers
 (
   fname varchar(20),
   lname varchar(20),
