@@ -21,10 +21,10 @@ create table passenger
 
 create table tickts
 (
-  tocity(20),
-  fromcity(20),
-  date(30),
-  email(20),
+  tocity varchar (20),
+  fromcity varchar(20),
+  date int,
+  email varchar(20),
   bookingnumber int,
   primary key(passportNumber)
 );
