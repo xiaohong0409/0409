@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -131,67 +132,30 @@ body {
 .home .tickets-list .ticket:hover {
     background-color: #fcfcfc;
 }
-.view h2 .open, .view h2 .resolved {
-    color: #38b673;
-}
-.view h2 .closed {
-    color: #b63838;
-}
-.view .ticket {
-    padding: 20px 0;
-}
-.view .ticket .created {
-    color: gray;
-}
-.view .comments {
-    margin-top: 15px;
-    border-top: 1px solid #ebebeb;
-    padding: 25px 0;
-}
-.view .comments .comment {
-    display: flex;
-    padding-bottom: 5px;
-}
-.view .comments .comment div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 70px;
-    color: #e6e6e6;
-    transform: scaleX(-1);
-}
-.view .comments .comment p {
-    margin: 0 0 20px 0;
-}
-.view .comments .comment p span {
-    display: flex;
-    font-size: 14px;
-    padding-bottom: 5px;
-    color: gray;
-}
-.create form, .view form {
+
+.create form{
     padding: 15px 0;
     display: flex;
     flex-flow: column;
     width: 400px;
 }
-.create form label, .view form label {
+.create form label {
     display: inline-flex;
     width: 100%;
     padding: 10px 0;
     margin-right: 25px;
 }
-.create form input, .create form textarea, .view form input, .view form textarea {
+.create form input, .create form textarea{
     padding: 10px;
     width: 100%;
     margin-right: 25px;
     margin-bottom: 15px;
     border: 1px solid #cccccc;
 }
-.create form textarea, .view form textarea {
+.create form textarea {
     height: 200px;
 }
-.create form input[type="submit"], .view form input[type="submit"] {
+.create form input[type="submit"] {
     display: block;
     background-color: #38b673;
     border: 0;
@@ -203,36 +167,12 @@ body {
     margin-top: 15px;
     border-radius: 5px;
 }
-.create form input[type="submit"]:hover, .view form input[type="submit"]:hover {
+.create form input[type="submit"]:hover {
     background-color: #32a367;
 }
   </style>
   <body>
-
-<?php
-    include 'function.php';
-
-    print_r($_POST);
-    if(isset($_POST["tickts"])){
-      $fromcity=$_POST['fromcity'];
-      $tocity=$_POST['tocity'];
-      $date=$_POST['date'];
-      $email=$_POST['email'];
-
-          $sql="INSERT INTO tickts (tocity,fromcity,date,email) VALUES('$tocity','$fromcity','$date','$email');";
-      mysqlo=i_query($conn,$sql);
-
-      $sta=mysqli_prepare($conn,$sql);
-
-      mysqli_stmt_bind_param($sta,'ssis',$fromcity,$tocity,$date,$email);
-      echo $conn->errno;
-      //$sta->execute();
-      echo $conn->errno;
-      echo $sta;
-        }
-    }
-
-    ?>
+  <include 'function.php'>
 <div class="content create">
 	<h2>Book Ticket</h2>
     <form action="create.php" method="post">
@@ -247,6 +187,23 @@ body {
         <input type="submit" value="Book">
     </form>
 
-    
+    <?php
+    print_r($_POST);
+    if(isset($_POST["tickets"])){
+      $fromcity=$_POST['fromcity'];
+      $tocity=$_POST['tocity'];
+      $date=$_POST['date'];
+      $email=$_POST['email'];
+
+          $sql="INSERT INTO tickets (tocity,fromcity,date,email) VALUES('$tocity','$fromcity','$date','$email');";
+    if($conn->query($sql)===TRUE){
+      echo"ADDED: " .$fromcity.", ".$tocity.", ".$date.", ".$email;
+
+    }else{
+      echo"ERROR: ".$sql."<br>".$conn->error;
+    }
+    $conn->cloce();
+    ?>
+
 </body>
 </html>
