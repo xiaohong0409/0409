@@ -19,7 +19,7 @@ create table passenger
   primary key(passportNumber)
 );
 
-create table tickts
+create table tickets
 (
   tocity varchar (20),
   fromcity varchar(20),
