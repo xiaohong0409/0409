@@ -28,7 +28,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="https://www.google.com" class="nav-link">help</a>
+      <a href="help.php" class="nav-link">help</a>
     </li>
 </div>
 </div>
@@ -60,7 +60,6 @@
 </div>
 
         <?php
-
         $conn=mysqli_connect("localhost","root","386465721","booking_system");
         $query="select * from passenger";
         $result=mysqli_query($conn,$query);
