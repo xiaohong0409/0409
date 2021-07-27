@@ -29,7 +29,7 @@ create table tickets
 	created datetime,
 	status enum('open','closed','resolved'),
 	primary key (id)
-) 
+);
 
 create table tickets_comments
 (
@@ -38,7 +38,7 @@ create table tickets_comments
 	msg text,
 	created datetime,
 	primary key (id)
-) 
+);
 
 
 
