@@ -22,22 +22,22 @@ create table passenger
 
 create table tickets
 (
-	id int(11) NOT NULL AUTO_INCREMENT,
-	title varchar(255) NOT NULL,
+	id int,
+	title varchar(255),
 	msg text NOT NULL,
-	email varchar(255) NOT NULL,
+	email varchar(255),
 	created datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	status enum('open','closed','resolved') NOT NULL DEFAULT 'open',
-	PRIMARY KEY (`id`)
+	primary key (`id`)
 ) 
 
 create table tickets_comments
 (
-	id int(11) NOT NULL AUTO_INCREMENT,
-	ticket_id int(11) NOT NULL,
+	id int,
+	ticket_id int,
 	msg text NOT NULL,
 	created datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (`id`)
+	primary key (id)
 ) 
 
 
