@@ -20,6 +20,7 @@ create table passenger
   primary key(bookingnumber)
 );
 
+
 create table tickets
 (
   tocity varchar (20),
