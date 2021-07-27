@@ -17,17 +17,18 @@ create table passenger
   address varchar(30),
   email varchar(20),
   bookingnumber int,
-   primary key(TrainNumber)
+   primary key(id)
 );
 
 create table tickets
 (
+  id int;
   tocity varchar (20),
   fromcity varchar(20),
   date int,
   email varchar(20),
   bookingnumber int,
-  primary key(passportNumber)
+  primary key(id)
 );
 create table reservation
 (
