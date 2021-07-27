@@ -56,6 +56,14 @@ create table bookedinfo
   primary key (reservationnumber)
 );
 
+create table search
+(
+	id int,
+	title varchar(200),
+	blurb text(1000),
+	url text(1000)
+);
+
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
 
