@@ -11,12 +11,13 @@ create table train
 
 create table passenger
 (
+  id int,
   fname varchar(20),
   lname varchar(20),
   address varchar(30),
   email varchar(20),
   bookingnumber int,
-  primary key(passportNumber)
+   primary key(TrainNumber)
 );
 
 create table tickets
