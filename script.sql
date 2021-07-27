@@ -23,12 +23,12 @@ create table passenger
 create table tickets
 (
 	id int,
-	title varchar(255),
+	title varchar(60),
 	msg text,
-	email varchar(255),
+	email varchar(50),
 	created datetime,
 	status enum('open','closed','resolved'),
-	primary key (`id`)
+	primary key (id)
 ) 
 
 create table tickets_comments
