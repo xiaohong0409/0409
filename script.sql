@@ -41,7 +41,7 @@ create table bookedinfo
 (
   reservationnumber int,
   passportnumber int,
-  primary key (reservationnumber, passportnumber),
+  primary key (reservationnumber),
   foreign key (reservationnumber) references reservation(reservationnumber),
   foreign key (passportnumber) references passenger(passportnumber)
 
