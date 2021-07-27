@@ -24,10 +24,10 @@ create table tickets
 (
 	id int,
 	title varchar(255),
-	msg text NOT NULL,
+	msg text,
 	email varchar(255),
-	created datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	status enum('open','closed','resolved') NOT NULL DEFAULT 'open',
+	created datetime,
+	status enum('open','closed','resolved'),
 	primary key (`id`)
 ) 
 
@@ -35,8 +35,8 @@ create table tickets_comments
 (
 	id int,
 	ticket_id int,
-	msg text NOT NULL,
-	created datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	msg text,
+	created datetime,
 	primary key (id)
 ) 
 
