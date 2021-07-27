@@ -22,13 +22,11 @@ create table passenger
 
 create table tickets
 (
-  id int;
   tocity varchar (20),
   fromcity varchar(20),
   date int,
   email varchar(20),
-  bookingnumber int,
-  primary key(id)
+  bookingnumber int
 );
 create table reservation
 (
@@ -41,14 +39,9 @@ create table bookedinfo
 (
   reservationnumber int,
   passportnumber int,
-  primary key (reservationnumber),
-  foreign key (reservationnumber) references reservation(reservationnumber),
-  foreign key (passportnumber) references passenger(passportnumber)
-
+  primary key (reservationnumber)
 );
 
-insert into table passenger(passportnumber, address, phonenumber, name) values('1038300','BKK','0970677857','Julie Smith');
-insert into train(capacity,arrivaltime,purchasedate,trainnumber,engineer,departuretime,arrivalto,departurefrom) VALUES
-  ('300','11:20','12/09/2000','K107','2','14:15','HUAXIN','BKK');
+insert into table passenger(fname,lname,address,email,bookingnumber) values('Xiaoming','Wang','123/3 Oak','001');
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
