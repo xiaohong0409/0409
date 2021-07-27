@@ -45,7 +45,7 @@ create table tickets_comments
 create table reservation
 (
   reservationnumber int,
-  seatnumber int not null,
+  seatnumber int,
   primary key(reservationNumber)
 );
 
@@ -59,6 +59,4 @@ create table bookedinfo
 insert into table passenger(fname,lname,address,email,bookingnumber) values('Xiaoming','Wang','123/3 Oak','xiaoming@gmail.com',001);
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
-insert into tickets (id, title, msg, email, created, status) VALUES (1, 'Test Ticket', 'This is your first ticket.', 'support@codeshack.io', '2020-06-10 13:06:17', 'open');
-insert into tickets_comments (id, ticket_id, msg, created) VALUES (1, 1, 'This is a test comment.', '2020-06-10 16:23:39');
 
