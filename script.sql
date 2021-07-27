@@ -11,12 +11,12 @@ create table train
 
 create table passenger
 (
-  add_passenger int,
   fname varchar(20),
   lname varchar(20),
   address varchar(30),
   email varchar(20),
   bookingnumber int,
+  insert_passenger int,
   primary key(bookingnumber)
 );
 
