@@ -11,7 +11,6 @@ create table train
 
 create table passenger
 (
-  insert int,
   fname varchar(20),
   lname varchar(20),
   address varchar(30),
