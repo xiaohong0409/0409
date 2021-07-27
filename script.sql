@@ -42,6 +42,6 @@ create table bookedinfo
   primary key (reservationnumber)
 );
 
-insert into table passenger(fname,lname,address,email,bookingnumber) values('Xiaoming','Wang','123/3 Oak','001');
+insert into table passenger(fname,lname,address,email,bookingnumber) values('Xiaoming','Wang','123/3 Oak','xiaoming@gmail.com','001');
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
