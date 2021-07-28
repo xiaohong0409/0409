@@ -1,5 +1,8 @@
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,13 +27,17 @@
 <div class="collapse navbar-collapse" id="navmenu">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a href="home.php" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Home</a>
     </li>
 		<li class="nav-item">
 			<a href="passenger.php" class="nav-link">Passenger</a>
 		</li>
     <li class="nav-item">
-      <a href="help.php" class="nav-link">help</a>
+      <a href="train.php" class="nav-link">Train</a>
+    </li>
+    <li class="nav-item">
+      <a href="https://github.com/xiaohong0409/0409/wiki" class="nav-link">help</a>
+
     </li>
 </div>
 </div>
@@ -42,5 +49,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
