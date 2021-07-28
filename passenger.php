@@ -40,12 +40,19 @@
     $conn=mysqli_connect("localhost","root","386465721","booking_system");
     $query="select * from passenger";
     $result=mysqli_query($conn,$query);
+echo"
+    <table>
+    <thead><td>First Name</td><td>Last Name</td><td>Address</td><td>Email</td><td>Booking Number</td></thead>";
 
     while($row=mysqli_fetch_array($result)){
-      echo"".$row['fname']." ".$row['lname']." ".$row['address']." ".$row['email']." ".$row['bookingnumber']."<br>";
+    //  echo"".$row['fname']." ".$row['lname']." ".$row['address']." ".$row['email']." ".$row['bookingnumber']."<br>";
+
+      echo "<tr><td>".$row['fname']."</td><td>".$row['lname']."</td><td>".$row['address']."</td><td>".$row['email']."</td><td>".$row['bookingnumber']."</td></tr>";
     }
     ?>
 
+
+
+
   </body>
 </html>
-
