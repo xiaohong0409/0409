@@ -1,8 +1,6 @@
 create table train
 (
-  purchasedate int,
   trainnumber int not null,
-  engineer int,
   departuretime int,
   arrivalto varchar(50),
   departurefrom varchar(50),
