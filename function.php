@@ -1,16 +1,18 @@
 
+
 <?php
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '386465721';
-    $DATABASE_NAME = 'booking_system';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	exit('Failed to connect to database!');
-    }
+$mysqli=new mysqli('localhost', 'root','386465721','booking_system') or die(mysqli_error($mysqli));
+
+if(isset($_POST['save'])){
+  $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+      $address=$_POST['address'];
+        $email=$_POST['email'];
+          $bookingnumber=$_POST['bookingnumber'];
+
+
+          $mysqli->query("INSERT INTO passenger(fname,lname,address,email,bookingnumber) VALUES('$fname','$lname','$address','$email','$bookingnumber')")
+          or die($mysqli->error);
 }
 
-
-?>
+ ?>
