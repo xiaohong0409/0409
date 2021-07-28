@@ -8,7 +8,7 @@ create table train
   dt time,
   dd varchar(10),
   distance int,
-  primary key(TrainNumber)
+  primary key(trainno)
 );
 
 create table passenger
