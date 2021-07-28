@@ -9,10 +9,10 @@
     <title></title>
   </head>
   <body>
-    <include function.php>
+
       <div class="container">
       <h3>Add new passenger into database</h3>
-      <form action="process.php" method="post">
+      <form action="insert.php" method="post">
         <div class="from-group">
         <label>First Name</lable>
         <input type="text" name="fname" class="form-control" value="">
@@ -34,20 +34,18 @@
       </div>
                 </form>
     </div>
-
-            <?php
-            $conn=mysqli_connect("localhost","root","386465721","booking_system");
-            $query="select * from passenger";
-            $result=mysqli_query($conn,$query);
-
-            while($row=mysqli_fetch_array($result)){
-              echo"".$row['fname']." ".$row['lname']." ".$row['address']." ".$row['email']." ".$row['bookingnumber']."<br>";
-            }
-            ?>
     </table>
     </div>
+    <?php
+    $conn=mysqli_connect("localhost","root","386465721","booking_system");
+    $query="select * from passenger";
+    $result=mysqli_query($conn,$query);
 
-
+    while($row=mysqli_fetch_array($result)){
+      echo"".$row['fname']." ".$row['lname']." ".$row['address']." ".$row['email']." ".$row['bookingnumber']."<br>";
+    }
+    ?>
 
   </body>
 </html>
+
