@@ -1,9 +1,13 @@
 create table train
 (
-  trainnumber int not null,
-  departuretime int,
-  arrivalto varchar(50),
-  departurefrom varchar(50),
+  trainno int not null,
+  tname varchar(20),
+  sp varchar(50),
+  st time,
+  dp varchar(50),
+  dt time,
+  dd varchar(10),
+  distance int,
   primary key(TrainNumber)
 );
 
