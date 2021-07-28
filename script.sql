@@ -16,7 +16,6 @@ create table passenger
   address varchar(30),
   email varchar(20),
   bookingnumber int,
-  insert_passenger int,
   primary key(bookingnumber)
 );
 
