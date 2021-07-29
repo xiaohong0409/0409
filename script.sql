@@ -8,6 +8,7 @@ create table train
   dt time,
   dd varchar(10),
   distance int,
+  insert_into_train varchar(100),
   primary key(trainno)
 );
 
@@ -18,6 +19,7 @@ create table passenger
   address varchar(30),
   email varchar(20),
   bookingnumber int,
+  insert_into_passenger varchar(100),
   primary key(bookingnumber)
 );
 
