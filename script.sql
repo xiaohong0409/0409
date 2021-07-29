@@ -42,4 +42,6 @@ create table bookedinfo
 
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
+INSERT INTO `train` (`trainno`, `tname`, `sp`, `st`, `dp`, `dt`, `dd`, `distance`, `insert_into_train`) VALUES ('17', 'Haijian Express', 'Chandigarh', '10:00:00', 'Lucknow', '21:30:00', 'Day1', '700', '');
+INSERT INTO `passenger` (`fname`, `lname`, `address`, `email`, `bookingnumber`, `insert_into_passenger`) VALUES ('Xiao', 'Li', '123/ Manhattan Condo', 'xiao@gmail.com', '123', '');
 
