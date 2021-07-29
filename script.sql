@@ -23,27 +23,6 @@ create table passenger
   primary key(bookingnumber)
 );
 
-create table tickets
-(
-	id int,
-	title varchar(60),
-	msg text,
-	email varchar(50),
-	created datetime,
-	status enum('open','closed','resolved'),
-	primary key (id)
-);
-
-create table tickets_comments
-(
-	id int,
-	ticket_id int,
-	msg text,
-	created datetime,
-	primary key (id)
-);
-
-
 
 create table reservation
 (
@@ -59,13 +38,7 @@ create table bookedinfo
   primary key (reservationnumber)
 );
 
-create table search
-(
-	id int,
-	title varchar(200),
-	blurb text(1000),
-	url text(1000)
-);
+
 
 insert into reservation(reservationnumber, seatnumber) values('09080','15');
 insert into bookedinfo(reservationnumber,passportnumber) values('09080','1038300');
